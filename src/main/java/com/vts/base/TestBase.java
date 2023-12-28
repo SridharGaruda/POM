@@ -23,8 +23,7 @@ public class TestBase {
 	public TestBase() {
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(
-					System.getProperty("G:\\Sridhar\\code\\POM\\src\\main\\java\\com\\vts\\config\\config.properties"));
+			FileInputStream ip = new FileInputStream("G:\\Sridhar\\code\\POM\\src\\main\\java\\com\\vts\\config\\config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -45,7 +44,8 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(testutil.Page_Load_Timeout));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(testutil.Implicit_wait));
-		prop.getProperty("url");
+		driver.get(prop.getProperty("url"));
 	}
-
+	
+	
 }

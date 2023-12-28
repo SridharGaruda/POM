@@ -9,13 +9,13 @@ import com.vts.base.TestBase;
 public class LoginPage extends TestBase {
 
 	//Page factory - OR
-	@FindBy(name = "@uname")
+	@FindBy(name = "uname")
 	WebElement Username;
 
-	@FindBy(name = "@pass")
+	@FindBy(name = "pass")
 	WebElement Password;
 
-	@FindBy(id = "@submitForm")
+	@FindBy(id = "submitForm")
 	WebElement LoginButton;
 	
 	@FindBy(xpath = "//img[@alt='Infosys']" )
