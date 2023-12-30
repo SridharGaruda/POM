@@ -30,21 +30,21 @@ public class DashboardPage extends TestBase {
 		return driver.getTitle();
 	}
 
+	public boolean ClickOnChartButton() {
+
+		boolean flag = chart_button.isDisplayed();
+		return flag;
+
+	}
+
 	public GeofencingPage ClickOnGeoFencelink() {
 		Geo_fencing_link.click();
 		return new GeofencingPage();
 	}
-	
-	public VehicleAlertPage Vehicle_alerts_link() {
-		Geo_fencing_link.click();
-		return new VehicleAlertPage();
-	}
-	
-	public boolean ClickOnChartButton() {
-		
-		boolean flag = chart_button.isDisplayed();
-		return flag ;
-		
+
+	public RulePage Vehicle_alerts_link() {
+		Vehicle_alerts_link.click();
+		return new RulePage();
 	}
 
 }

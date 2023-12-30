@@ -2,6 +2,6 @@ package com.vts.pages;
 
 import com.vts.base.TestBase;
 
-public class VehicleAlertPage extends TestBase{
+public class RulePage extends TestBase{
 
 }
