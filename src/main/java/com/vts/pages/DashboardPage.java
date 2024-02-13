@@ -31,20 +31,18 @@ public class DashboardPage extends TestBase {
 	}
 
 	public boolean ClickOnChartButton() {
-
 		boolean flag = chart_button.isDisplayed();
 		return flag;
-
 	}
 
-	public GeofencingPage ClickOnGeoFencelink() {
+	public GeofencingPage ClickOnGeo_fencing_link() { //ClickOnGeoFencelink
 		Geo_fencing_link.click();
 		return new GeofencingPage();
 	}
 
-	public RulePage Vehicle_alerts_link() {
-		Vehicle_alerts_link.click();
-		return new RulePage();
-	}
+//	public RulePage Vehicle_alerts_link() {
+//		Vehicle_alerts_link.click();
+//		return new RulePage();
+//	}
 
 }

@@ -8,7 +8,7 @@ import com.vts.base.TestBase;
 
 public class LoginPage extends TestBase {
 
-	//Page factory - OR
+	// Page factory - OR
 	@FindBy(name = "uname")
 	WebElement Username;
 
@@ -17,34 +17,29 @@ public class LoginPage extends TestBase {
 
 	@FindBy(id = "submitForm")
 	WebElement LoginButton;
-	
-	@FindBy(xpath = "//img[@alt='Infosys']" )
-	WebElement AumLogo;
-	
 
-    //Initializing the page objects
+	@FindBy(xpath = "//img[@alt='Infosys']")
+	WebElement AumLogo;
+
+	// Initializing the page objects
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
 	}
-	
-	//Actions
-	public String ValidateLoginPageTitle()
-	{
+
+	// Actions
+	public String ValidateLoginPageTitle() {
 		return driver.getTitle();
 	}
-	
-	 	
-	public boolean AumImage()
-	{
+
+	public boolean AumImage() {
 		return AumLogo.isDisplayed();
 	}
-	
-	public DashboardPage login(String un, String pwd)
-{
-	Username.sendKeys(un);
-	Password.sendKeys(pwd);
-	LoginButton.click();
-	
-	return new DashboardPage();
-}
+
+	public DashboardPage login(String un, String pwd) {
+		Username.sendKeys(un);
+		Password.sendKeys(pwd);
+		LoginButton.click();
+
+		return new DashboardPage();
+	}
 }
